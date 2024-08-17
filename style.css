@@ -1,11 +1,11 @@
-/* Basic reset and styling */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
 nav {
@@ -184,7 +184,7 @@ button {
     padding: 10px 20px;
     font-size: 1em;
     color: #fff;
-    background-color: #565b62;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -209,5 +209,4 @@ footer {
 }
 
 @keyframes parallax {
-    /* Define parallax effect if needed */
 }

@@ -7,11 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
 
-    // Initialize AOS
     AOS.init();
 
     window.addEventListener('scroll', function() {
-        // Change navbar background on scroll
         if (window.scrollY > 50) {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
             navbar.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.3)';
         }
 
-        // Highlight the active section
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -38,26 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation
     form.addEventListener('submit', function(event) {
         let isValid = true;
 
-        // Clear previous errors
         document.querySelectorAll('.error-message').forEach(message => message.style.display = 'none');
 
-        // Validate name
         if (nameInput.value.trim() === '') {
             document.getElementById('name-error').style.display = 'block';
             isValid = false;
         }
 
-        // Validate email
         if (!emailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
             document.getElementById('email-error').style.display = 'block';
             isValid = false;
         }
 
-        // Validate message
         if (messageInput.value.trim() === '') {
             document.getElementById('message-error').style.display = 'block';
             isValid = false;
